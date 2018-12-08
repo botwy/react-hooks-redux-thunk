@@ -1,8 +1,6 @@
 import React from 'react';
-import {useChatListContainer} from "../containerHooks/useChatListContainer";
 
-export const ChatList = () => {
-  const { chatList } = useChatListContainer();
+export const ChatList = React.memo(({chatList}) => {
 
   console.log("ChatList render")
 
@@ -20,4 +18,4 @@ export const ChatList = () => {
       }
     </div>
   );
-}
+})

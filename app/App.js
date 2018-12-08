@@ -1,5 +1,5 @@
 import React from 'react';
-import {ChatList} from "../page/ChatList";
+import {ChatListContainer} from "../containerHooks/ChatListContainer";
 import {Counter} from "../page/Counter";
 
 export const App = () => {
@@ -8,7 +8,7 @@ export const App = () => {
 
   return (
     <div>
-     <ChatList/>
+     <ChatListContainer/>
      <Counter/>
     </div>
   );

@@ -1,4 +1,4 @@
-import {useContext, useMemo, useCallback} from "react";
+import React, {useContext, useMemo, useCallback} from "react";
 import {storeContext} from "../main";
 import get from "lodash/get";
 
