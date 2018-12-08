@@ -1,8 +1,6 @@
 import React from 'react';
-import {useCounterContainer} from "../containerHooks/useCounterContainer";
 
-export const Counter = () => {
-  const { count, getCounterNextNumber } = useCounterContainer();
+export const Counter = ({ count, getCounterNextNumber }) => {
 
   console.log("Counter render")
 

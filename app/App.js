@@ -1,6 +1,6 @@
 import React from 'react';
-import {ChatListContainer} from "../containerHooks/ChatListContainer";
-import {Counter} from "../page/Counter";
+import {ChatListContainer} from "../container/ChatListContainer";
+import {CounterContainer} from "../container/CounterContainer";
 
 export const App = () => {
 
@@ -9,7 +9,7 @@ export const App = () => {
   return (
     <div>
      <ChatListContainer/>
-     <Counter/>
+     <CounterContainer/>
     </div>
   );
 }
