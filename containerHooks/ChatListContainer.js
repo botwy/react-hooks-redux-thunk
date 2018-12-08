@@ -4,15 +4,11 @@ import {ChatList} from "../page/ChatList";
 import get from "lodash/get";
 
 export const ChatListContainer =  () => {
-  const {Consumer} = storeContext;
+  const {state, dispatch} = useContext(storeContext);
+  const chatList =  useMemo(() => get(state, "chat.list"),[state.chat]);
+  const handler = () => dispatch({type:"ENTER_CHAT"});
 
   return (
-    <Consumer>
-      {({state}) => {
-        const chatList =  get(state, "chat.list");
-
-        return <ChatList chatList={chatList}/>
-      }}
-    </Consumer>
+    <ChatList chatList={chatList} handler={handler}/>
   );
 }
