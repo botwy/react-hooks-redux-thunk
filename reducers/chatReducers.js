@@ -1,10 +1,11 @@
 import {handleActions} from "redux-actions";
 
 export const defaultChatState = {
+  count: 0,
   list: [
     {
       id: "A-00001-A",
-      title: "Чат Военведа",
+      title: "Chat one",
       private: false,
       memberList: [
         {id: "AAA-001", name: "Dima"},
@@ -24,5 +25,8 @@ export const defaultChatState = {
 }
 
 export const chat = handleActions({
-
+  "NEW_COUNT": (state, action) => ({
+    ...state,
+    count: action.newCount,
+  })
 }, defaultChatState)
